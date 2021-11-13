@@ -3,6 +3,7 @@
   "plugins": ["@typescript-eslint", "example"],
   "extends": ["plugin:@typescript-eslint/recommended"],
   "rules": {
-    "example/i18n-literal": "error"
+    "example/i18n-literal": "error",
+    "example/ban-import": "error"
   }
 }

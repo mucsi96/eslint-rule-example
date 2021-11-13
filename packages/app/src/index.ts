@@ -1,6 +1,7 @@
-import { t } from "./i18n";
+import { t } from './i18n';
 
-const a = "hello";
+const a = 'hello';
 
-console.log(t("hello"));
+console.log(t('hello'));
+console.log(t(`hello`));
 console.log(t(a));

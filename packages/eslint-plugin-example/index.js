@@ -1,20 +1,5 @@
-exports.rules = {
-  'i18n-literal': {
-    create: function (context) {
-      const { report } = context;
+const i18nLiteral = require('./rules/i18nLiteral');
 
-      return {
-        CallExpression(node) {
-          if (
-            node.callee.type === 'Identifier' &&
-            node.callee.name === 't' &&
-            node.arguments.length &&
-            node.arguments[0].type !== 'Literal'
-          ) {
-            report(node, 't function should be called with literal');
-          }
-        },
-      };
-    },
-  },
+exports.rules = {
+  'i18n-literal': i18nLiteral,
 };

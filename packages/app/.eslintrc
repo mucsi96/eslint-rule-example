@@ -1,0 +1,8 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "example"],
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "example/i18n-literal": "error"
+  }
+}

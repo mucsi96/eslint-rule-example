@@ -10,6 +10,11 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "jest": "^27.4.7",
+    "lerna": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "typescript": "^4.4.4"
   }
 }

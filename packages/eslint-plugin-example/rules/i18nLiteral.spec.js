@@ -7,7 +7,11 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run('i18n-literal', i18nLiteral, {
-  valid: [{ code: "console.log(t('hello'));" }],
+  valid: [
+    { code: "console.log(t('hello'));" },
+    { code: 'console.log(t());' },
+    { code: "console.log(t('hello', `hello`));" },
+  ],
   invalid: [
     {
       code: 'console.log(t(`hello`));',
@@ -15,6 +19,10 @@ ruleTester.run('i18n-literal', i18nLiteral, {
     },
     {
       code: "const a = 'hello'; console.log(t(a));",
+      errors: ['t function should be called with literal'],
+    },
+    {
+      code: "console.log(t(`hello`, 'hello'));",
       errors: ['t function should be called with literal'],
     },
   ],

@@ -13,5 +13,9 @@ ruleTester.run('ban-import', banImport, {
       code: "import 'fs';",
       errors: ['importing from fs is not allowed from <input>'],
     },
+    {
+      code: "import { readFile } from 'fs';",
+      errors: ['importing from fs is not allowed from <input>'],
+    },
   ],
 });

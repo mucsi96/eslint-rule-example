@@ -3,7 +3,7 @@ const { resolve, dirname } = require('path');
 
 function getCSSModuleClassNames(path) {
     const module = readFileSync(path, 'utf8');
-    return module.match(/(?<=\.)[_A-Za-z0-9\-]+(?=[^}]+{)/g);
+    return module.match(/(?<!:global([^(][^},]*)|[(][^},)]*)(?<=\.)[_A-Za-z0-9\-]+(?=[^}]+{)/g);
   }
   
   function getCSSModuleImportDetails(context, node) {

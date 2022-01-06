@@ -1,3 +1,14 @@
 .container {
-    display: flex;
+  display: flex;
+}
+
+.container :global .a,
+:global.a {
+  display: flex;
+}
+
+.container :global(.a) .b,
+:global(.a),
+.c {
+  display: flex;
 }

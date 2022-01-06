@@ -19,7 +19,15 @@ ruleTester.run('no-undef-css-module-class', noUndefCSSModuleClass, {
     {
       filename: __filename,
       code: "import styles from './test.css'; console.log(styles.notExisting);",
-    }
+    },
+    {
+      filename: __filename,
+      code: "import styles from './test.module.css'; console.log(styles.b);",
+    },
+    {
+      filename: __filename,
+      code: "import styles from './test.module.css'; console.log(styles.c);",
+    },
   ],
   invalid: [
     {
@@ -31,6 +39,11 @@ ruleTester.run('no-undef-css-module-class', noUndefCSSModuleClass, {
       filename: __filename,
       code: "import styles from './test.module.css'; console.log(styles.notExisting);",
       errors: ['CSS Module class "notExisting" doesn\'t exist in styles'],
+    },
+    {
+      filename: __filename,
+      code: "import styles from './test.module.css'; console.log(styles.a);",
+      errors: ['CSS Module class "a" doesn\'t exist in styles'],
     },
   ],
 });

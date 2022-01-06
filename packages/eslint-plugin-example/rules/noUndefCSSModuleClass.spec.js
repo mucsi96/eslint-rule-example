@@ -1,12 +1,12 @@
 const { RuleTester } = require('eslint');
-const noUndefClass = require('./noUndefClass');
+const noUndefCSSModuleClass = require('./noUndefCSSModuleClass');
 const parser = require.resolve('@typescript-eslint/parser');
 
 const ruleTester = new RuleTester({
   parser,
 });
 
-ruleTester.run('no-undef-class', noUndefClass, {
+ruleTester.run('no-undef-css-module-class', noUndefCSSModuleClass, {
   valid: [
     {
       filename: __filename,

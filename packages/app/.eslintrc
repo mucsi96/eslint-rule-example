@@ -5,6 +5,7 @@
   "rules": {
     "example/i18n-literal": "error",
     "example/ban-import": "error",
-    "example/no-undef-css-module-class": "error"
+    "example/no-undef-css-module-class": "error",
+    "example/no-unused-css-module-class": "error"
   }
 }

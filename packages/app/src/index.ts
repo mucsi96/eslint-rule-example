@@ -3,6 +3,8 @@ import 'fs';
 
 import styles from './test.module.css';
 
+import a from 'a/dist';
+
 const a = 'hello';
 
 console.log(t('hello'));
